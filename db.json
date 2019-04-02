@@ -3,24 +3,5 @@
     "number": "109397253",
     "purchaseNumber": "109397253",
     "providerName": "Walmart GMT",
-    "storeID": "2667",
-    "city": "DALLAS",
-    "state": "TX",
-    "region": "5",
-    "technicianName": "JOSE CABRERA",
-    "primaryStatus": "IN PROGRESS",
-    "extendedStatus": "INCOMPLETE",
-    "createdBy": "Justin Francis - JWFRANC.s02667",
-    "createdDate": 1544606014000,
-    "expCompDate": 1550608225000,
-    "priority": "P3-ONSITE W/I 3 DAYS",
-    "trade": "FM - INTERIOR LIGHTING",
-    "scheduledDate": 1550597425000,
-    "scheduledEndDate": null,
-    "updatedDate": 1550621975297,
-    "description": "AUTO CARE CENTER / Electrical and Lighting Services / Lights - INTerior - No lift required / Damaged lighting fixture / Lower bay light fixture is damage. Glass is gone from fixture in bay 1\n",
-    "problemCode": "Damaged lighting fixture",
-    "value": 1,
-    "conflict": false,
-    "compatible": true
-  }
+    "description": "AUTO CARE CENTER / Electrical and Lighting Services / Lights - INTerior - No lift required / Damaged lighting fixture / Lower bay light fixture is damage. Glass is gone from fixture in bay 1\n"
+}
