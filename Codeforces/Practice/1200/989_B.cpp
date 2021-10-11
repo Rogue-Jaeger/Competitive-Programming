@@ -9,32 +9,28 @@ int main() {
 	
 	cin >> n >> p >> s;
 	
-	bool is_p_period = true;
-	
-	for (int i = 0 ; i < (n-p); i++) {
-		if (s[i] == '.' && s[i+p] == '.') {
-			s[i] = '1';
-			s[i+p] = '0';
-			is_p_period = false;
-			break; // optimization for time
-		} else if (s[i] == '.') {
-			s[i] = s[i+p] - '0' ? '0' : '1';
-			is_p_period = false;
-			break; // optimization for time
-		} else if (s[i+p] == '.') {
-			s[i+p] = s[i] - '0' ? '0' : '1';
-			is_p_period = false;
-			break; // optimization for time
-		} else if (s[i] != s[i+p] ) {
-			is_p_period = false;
-			break; // optimization for time
-		}
+	int i = 0;
+	for (; i < (n-p); i++) {
+		if(s[i] == s[i+p] && s[i] != '.') { // No need to check for && s[i+p] != '.' as it is similar to s[i]  
+			continue;
+		} else break;
 	}
 	
-	if(is_p_period) {
+	if(i == (n-p)) {
 		cout << "No" << endl;
 	} else {
-		for (int i = 0; i < s.size(); i++) {
+		if (s[i+p] == '.' && s[i] == '.') {
+			s[i] = '1';
+			s[i+p] = '0';
+			++i;
+		} else if (s[i] == '.') {
+			s[i] = s[i+p] == '0' ? '1' : '0';
+			++i;
+		} else if (s[i+p] == '.') {
+			s[i+p] = s[i] == '0' ? '1' : '0';
+			++i;
+		}
+		for (; i < n; i++) {
 			if(s[i] == '.') s[i] = '1';
 		}
 		cout << s << endl;
@@ -42,3 +38,4 @@ int main() {
 	
 	return 0;
 } 
+
