@@ -10,6 +10,7 @@ int main() {
 	cin >> n >> p >> s;
 	
 	int i = 0;
+	//The 2 for loops can be merged somehow to reduce solution size
 	for (; i < (n-p); i++) {
 		if(s[i] == s[i+p] && s[i] != '.') { // No need to check for && s[i+p] != '.' as it is similar to s[i]  
 			continue;
