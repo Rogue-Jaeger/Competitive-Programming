@@ -5,3 +5,5 @@
 5. Calculate steps in binary search to find a failure case for (l==r). Find 25 in --> 21 22 23 23 24 24 26 27 29 30 31
 6. Binary search will always yeild in the closest values(present in closest index (if l > r then l and r are the closest indices)) to what you want to search may it be a lower value than what you wanted to search or bigger. Find 55 in 52 52 57 58 59.
 7. How to do binary search to find closest neighbours - Commit hash - 3231091f6b3e9d0446a036acbc7cfa7bc6210fe2
+8. In binary search the values of l and r can go beyond the bounds and can have values [0, n].
+9. In binary search the final index points to the number just greater or smaller than the searched for number.
