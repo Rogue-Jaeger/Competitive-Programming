@@ -7,3 +7,5 @@
 7. How to do binary search to find closest neighbours - Commit hash - 3231091f6b3e9d0446a036acbc7cfa7bc6210fe2
 8. In binary search the values of l and r can go beyond the bounds and can have values [0, n].
 9. In binary search the final index points to the number just greater or smaller than the searched for number.
+10. Through scanf you cannot input string type you have to declare a character array to do so and the input method is scanf("%s", n), notice there is no & before n. To get size of string in c strlen().
+11. Cannot compare long long and int type in min or max function.
