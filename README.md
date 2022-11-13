@@ -10,3 +10,4 @@
 10. Through scanf you cannot input string type you have to declare a character array to do so and the input method is scanf("%s", n), notice there is no & before n. To get size of string in c strlen().
 11. Cannot compare long long and int type in min or max function.
 12. Doing (+ 1) operation is any easy way to perform ceil functionality in integer division where you'll have to divide by 2; -- See same commit to find code where used.
+13. Binary search: // Don't do mid+1 or mid-1 while updating start and end values if you never want start == end. -- See same commit to find code.
