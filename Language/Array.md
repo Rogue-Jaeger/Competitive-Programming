@@ -11,7 +11,7 @@ For primitive types:
 int[] myIntArray = new int[3]; // each element of the array is initialised to 0
 int[] myIntArray = {1, 2, 3};
 int[] myIntArray = new int[]{1, 2, 3};
-String[] array = new String[] {"a", "b"};
+boolean[][] visited = new boolean[board.length][board[0].length]; // Create space dynamically
 
 // Since Java 8. Doc of IntStream: https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html
 
@@ -27,6 +27,7 @@ For classes, for example ```String```, it's the same:
 String[] myStringArray = new String[3]; // each element is initialised to null
 String[] myStringArray = {"a", "b", "c"};
 String[] myStringArray = new String[]{"a", "b", "c"};
+String[] array = new String[] {"a", "b"};
 ```
 
 The third way of initializing is useful when you declare an array first and then initialize it, pass an array as a function argument, or return an array. The explicit type is required.
