@@ -1,0 +1,1 @@
+Create a scratch file in intellij.
