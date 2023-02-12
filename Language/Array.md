@@ -32,12 +32,12 @@ String[] array = new String[] {"a", "b"};
 
 The third way of initializing is useful when you declare an array first and then initialize it, pass an array as a function argument, or return an array. The explicit type is required.
 
-String[] myStringArray;
+#### String[] myStringArray;
 ```
 myStringArray = new String[]{"a", "b", "c"};
 ```
 
-Multidimensional Arrays:
+#### Multidimensional Arrays:
 ```
 int[] num[] = new int[5][2];
 OR
@@ -86,13 +86,19 @@ Java:
 
 ```
 int[] array = new int[4];
-array.length
+array.length // field
 ```
 
 Same for non-primitive types:
 ```
 String[] str = { "GEEKS", "FOR", "GEEKS" };
-str.length
+str.length // field
+```
+
+For wrapper classes for arrays like: ArrayList:
+```
+ArrayList<String> arr = new ArrayList<>();
+arr.size() // method call and not a field
 ```
 
 C++:
