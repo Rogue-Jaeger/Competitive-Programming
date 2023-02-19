@@ -4,6 +4,9 @@ Declare and initialize:
 Java:
 ------------------------------------------------
 
+**IMP: Dont access the arraylist same as ```[]``` use ```get()``` method.** <br>
+**IMP: Set value in an array at some index: ```list.set(2, "Violet");```**
+
 You can either use array declaration or array literal (but only when you declare and affect the variable right away, array literals cannot be used for re-assigning an array).
 
 For primitive types:
