@@ -57,6 +57,13 @@ OR
 int[][] num={ {1}, {1,2}, {1,2,3,4,5}, {1,2}, {1,2,3} };
 ```
 
+#### Initialization values:
+
+A newly created array 1D or 2D in java will initialize by default by the value 0 for byte, short, char, and int type, <br>
+0.0 for floating-point arrays like float and double, false for boolean arrays, and null for an array of reference type like String array elements.
+
+Read more here: [Arrays](https://www.java67.com/2014/10/how-to-create-and-initialize-two-dimensional-array-java-example.html#ixzz7tyOZQ8FD)
+
 C++
 ------------------------------------------------
 
