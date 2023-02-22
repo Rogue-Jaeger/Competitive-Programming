@@ -13,3 +13,6 @@ for (Map.Entry<String, String> entry : map.entrySet()) {
 Create/Update value in a map:```map.put(key, 1);```
 
 Clear all elements: ```clear()```
+
+To check if certain key is present in map: ```m.containsKey(val)``` <br>
+**IMP: Its ```containsKey()``` not just ```contains()```**
