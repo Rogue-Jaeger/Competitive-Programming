@@ -1,7 +1,7 @@
 Length
 ====================================================
 1. Java: <br>
-   a. In ```String``` class: ```str.length()```
+   a. In ```String``` class: ```str.length()``` **IMP: Its not ```size()```**
 2. C++: <br>
    a. In ```string``` class both ```str.length()``` and ```str.size()``` can be used. <br>
    b. <b> Notice the s is small in the string class in C++. </b> <br>
