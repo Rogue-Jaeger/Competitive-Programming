@@ -1,6 +1,8 @@
 Java:
 ====================================================
 
+The integer can also be initialized as ```int val = 10_000_000;```
+
 By default, the int data type is a 32-bit signed two's complement integer, which has a minimum value of ```-2^31``` and a maximum value of ```2^31-1```. <br>
 In Java SE 8 and later, you can use the int data type to represent an unsigned 32-bit integer, which has a minimum value of 0 and a maximum value of ```2^32-1```. <br>
 Use the Integer class to use int data type as an unsigned integer. <br>
