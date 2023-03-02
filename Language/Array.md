@@ -127,3 +127,15 @@ For non-primitive types:
 vector<int> g1;
 g1.size()
 ```
+
+Cloning:
+================================================
+
+Java:
+------------------------------------------------
+
+#### Primitive types:
+```
+int[] numbers = new int[nums.length];
+numbers = nums.clone();
+```
