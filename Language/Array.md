@@ -139,3 +139,23 @@ Java:
 int[] numbers = new int[nums.length];
 numbers = nums.clone();
 ```
+
+
+Traversal:
+================================================
+
+Java:
+------------------------------------------------
+
+**IMP: This is takes much less memory:**
+```
+IntStream.range(row1, row2 + 1)
+    .forEach(row -> IntStream.range(col1, col2 + 1)
+        .forEach(col -> this.rectangle[row][col] = newValue));
+```
+**Than:**
+```
+for (int i = row1; i <= row2; i++)
+    for (int j = col1; j <= col2; j++)
+        rect[i][j] = newValue;
+```
