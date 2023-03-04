@@ -29,3 +29,14 @@ substr(startIndex - included, numberOfElements);
 string s1 = "Geeks";
 string r = s1.substr(3, 2); // returns ks
 ```
+
+Prefix Matching
+====================================================
+1. Java: <br>
+
+**```indexOf()``` will return first index of occurrence of the word (_is case-sensitive_):** 
+```
+String myStr = "Hello planet earth, you are a great planet.";
+System.out.println(myStr.indexOf("Hello")); // Will print 0
+System.out.println(myStr.indexOf("hello")); // Will print -1
+```
