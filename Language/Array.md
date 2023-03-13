@@ -8,7 +8,8 @@ Java:
 **IMP: Set value in an array at some index: (_Index is the first argument_) ```list.set(2, "Violet");```** <br>
 **IMP: Add value in an array at some index: (_Index is the first argument_) ```list.add(2, "Violet");```** <br>
 **IMP: ```List.add()``` returns a boolean value. So don't do ```list1.add(list2.add(val));```** <br>
-**IMP: For ```int[] nums``` ```Arrays.asList(nums)``` will not work as nums is ```int[]``` not ```Integer[]```. Sol: ```Arrays.stream(nums).boxed().collect(Collectors.toList()```**
+**IMP: For ```int[] nums``` ```Arrays.asList(nums)``` will not work as nums is ```int[]``` not ```Integer[]```. Sol: ```Arrays.stream(nums).boxed().collect(Collectors.toList()```** <br>
+**IMP: Declare and initialize ArrayList in same line: ```new ArrayList<String>() {{ add("A"); add("B"); add("C"); }};```** <br>
 
 You can either use array declaration or array literal (but only when you declare and affect the variable right away, array literals cannot be used for re-assigning an array).
 
