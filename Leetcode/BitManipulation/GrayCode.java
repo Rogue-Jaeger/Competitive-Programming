@@ -65,3 +65,5 @@ class Solution {
 
 // More optimized approach is (don't know how this works for now...):
 i ^ (i >> 1)
+   
+<img width="970" alt="image" src="https://user-images.githubusercontent.com/34827180/232134148-cef9d1c1-4342-4904-a703-f90cb449150d.png">    
