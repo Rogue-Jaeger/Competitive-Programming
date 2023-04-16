@@ -4,6 +4,7 @@ Declare and initialize:
 Java:
 ------------------------------------------------
 
+**IMP: ```new ArrayList(5)``` doesn't mean size is 5 in this case ```.size()``` will give result ```0```** <br>
 **IMP: Dont access the arraylist same as ```[]``` use ```get()``` method.** <br>
 **IMP: Set value in an array at some index: (_Index is the first argument_) ```list.set(2, "Violet");```** <br>
 **IMP: Add value in an array at some index: (_Index is the first argument_) ```list.add(2, "Violet");```** <br>
