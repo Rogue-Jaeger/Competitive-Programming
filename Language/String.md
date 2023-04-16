@@ -40,3 +40,9 @@ String myStr = "Hello planet earth, you are a great planet.";
 System.out.println(myStr.indexOf("Hello")); // Will print 0
 System.out.println(myStr.indexOf("hello")); // Will print -1
 ```
+
+Join list of strings
+====================================================
+1. Java: <br>
+
+```String str = String.join("", list);```
