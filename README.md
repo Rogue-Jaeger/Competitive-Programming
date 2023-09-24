@@ -14,3 +14,4 @@
 14. Swapping values in an array will always maintain the count of individual values which will save extra lines of code to be written just to maintain count. See: [Sort Colors](https://leetcode.com/problems/sort-colors/)
 15. In competitions no leading 0 means 0 should not be in front of any digit [0, 9] but it can be present singly i.e. 0 is a valid output.
 16. Try using your existing partial computed solution may it be in the form of array or variable instead of creating further variables to derive further solutions. See code for MergeIntervals.java
+17. Files starting with ☆ symbol are significant.
