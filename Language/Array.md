@@ -4,12 +4,14 @@ Declare and initialize:
 Java:
 ------------------------------------------------
 
-**IMP: ```new ArrayList(5)``` doesn't mean size is 5 in this case ```.size()``` will give result ```0```** <br>
+**IMP: ```new ArrayList(5)``` doesn't mean size is 5 in this case ```.size()``` will give result ```0```.** <br>
+**IMP: ```new LinkedList(5)``` will give error as LinkedList doesn't support initial size.** <br>
 **IMP: Dont access the arraylist same as ```[]``` use ```get()``` method.** <br>
 **IMP: Set value in an array at some index: (_Index is the first argument_) ```list.set(2, "Violet");```** <br>
 **IMP: Add value in an array at some index: (_Index is the first argument_) ```list.add(2, "Violet");```** <br>
 **IMP: ```List.add()``` returns a boolean value. So don't do ```list1.add(list2.add(val));```** <br>
 **IMP: For ```int[] nums``` ```Arrays.asList(nums)``` will not work as nums is ```int[]``` not ```Integer[]```. Sol: ```Arrays.stream(nums).boxed().collect(Collectors.toList()```** <br>
+**IMP: ```Arrays.asList()``` returns a non-resizable list meaning you can't use ```.add()``` method on it, Otherwise you'll get ```java.lang.UnsupportedOperationException``` use this instead: ```new ArrayList<Integer>(Arrays.asList(1))```** <br>
 **IMP: Declare and initialize ArrayList in same line: ```new ArrayList<String>() {{ add("A"); add("B"); add("C"); }};```** <br>
 
 You can either use array declaration or array literal (but only when you declare and affect the variable right away, array literals cannot be used for re-assigning an array).
@@ -18,7 +20,8 @@ For primitive types:
 ```
 int[] myIntArray = new int[3]; // each element of the array is initialised to 0
 int[] myIntArray = {1, 2, 3};
-int[] myIntArray = new int[]{1, 2, 3};
+int[] myIntArray = new int[]{1, 2, 3}; 
+// While returning from a function i.e "return new int[]{start++, end++}" dont do ++ in the end. See Return.md.
 boolean[][] visited = new boolean[board.length][board[0].length]; // Create space dynamically
 
 // Since Java 8. Doc of IntStream: https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html
@@ -160,4 +163,18 @@ IntStream.range(row1, row2 + 1)
 for (int i = row1; i <= row2; i++)
     for (int j = col1; j <= col2; j++)
         rect[i][j] = newValue;
+```
+
+Clone:
+================================================
+
+Java:
+------------------------------------------------
+
+Function to clone an array in java:
+
+```
+int a[] = { 1, 8, 3 };
+// Copying elements of a[] to b[]
+int b[] = a.clone();
 ```
