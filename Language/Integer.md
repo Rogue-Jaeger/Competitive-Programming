@@ -14,3 +14,14 @@ C++:
 A maximum integer value that can be stored in an unsigned int data type is typically 4, 294, 967, 295, around 232 – 1(**but is compiler dependent**). <br>
 The maximum value that can be stored in **unsigned int** is stored as a constant in the ```<climits>``` header file whose value can be used as ```UINT_MAX```. <br>
 Declared as: ```unsigned int valueFromLimits = UINT_MAX;```
+
+Javascript:
+====================================================
+
+How to check if value is a number:
+1. typeof ```val === 'number'``` // Caveat is NaN is also considered a number.
+2. ```Number.isInteger()``` // Caveat is it is limited to integer range so ```312331231e123123123``` will give false.
+3. The solution for a value not being a number is:
+```
+typeof value !== 'number' || Number.isNaN(value)
+```
