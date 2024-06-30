@@ -41,7 +41,7 @@ class KthLargest {
             if (leftChildIndex < size && minHeap[currentIndex] > minHeap[leftChildIndex]) { // missed the first & condition...
                 minValChildIndex = getLeftChildIndex(currentIndex);
             }
-            if (rightChildIndex < size &&minHeap[minValChildIndex] > minHeap[rightChildIndex]) { // missed the first & condition...
+            if (rightChildIndex < size && minHeap[minValChildIndex] > minHeap[rightChildIndex]) { // missed the first & condition...
                 minValChildIndex = getRightChildIndex(currentIndex);
             }
             if (minValChildIndex != currentIndex) {
@@ -54,7 +54,7 @@ class KthLargest {
     // Core function of min heap which inserts a value in it.
     private void insert(int val) {
         int currentIndex = size, parentIndex = getParentIndex(size); // Here (size) will come as (size - 1) will contain genuine val.
-        minHeap[currentIndex] = val;
+        minHeap[currentIndex] = val; // Here inserting the value at the end takes care of the heap being a complete binary tree condition.
         while (currentIndex != parentIndex) { // Here can't do currentIndex >= 0 as (0 - 1) / 2 = 0
             if (minHeap[currentIndex] < minHeap[parentIndex]) {
                 swap(currentIndex, parentIndex);
