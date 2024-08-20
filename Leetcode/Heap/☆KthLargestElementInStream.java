@@ -1,6 +1,20 @@
 // https://leetcode.com/problems/kth-largest-element-in-a-stream
 
 /**
+ * While inserting the value the element is placed at the bottom and propogated upwards
+ * while in the case of delete the last element is placed at the top and then propogated
+ * downwards. 
+ * So in a nutshell the flow is: insert -> bottom to top, delete -> top to bottom
+ * 
+ * Delete functionality is bigger than insert
+ * 
+ * There is a heapify function as well (not implemented here) which works on an already present
+ * array and creates a heap out of it its amortized complexity is O(n), Whereas if you
+ * generate heap on every input one by one the complexity is:
+ * for loop for every element -> O(n)
+ * insert the element into heap -> O(log(n))
+ * total complexity: O(nlog(n))
+ * 
  * Your KthLargest object will be instantiated and called as such:
  * KthLargest obj = new KthLargest(k, nums);
  * int param_1 = obj.add(val);
