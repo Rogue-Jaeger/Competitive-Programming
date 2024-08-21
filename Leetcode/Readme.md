@@ -1,0 +1,1 @@
+1. If the range of a important property or varible in leetcode question is around 1000 then that means that the code can be done with n^2 complexity as well.
