@@ -53,3 +53,12 @@ Above code yields in:
 ```
 
 Follow up question: How to determine if a bit is set or not at a particular position.
+
+Java does a modulus operation before doing bitwise shift operation. i.e.
+
+```1 << 31``` will result in ```-2147483648```
+and then on the same number if you do ```1 << 1``` or ```1 << 2```
+then it will yeild 0 because the only set bit is now overflown the size of int 
+but if you do ```1 << 32``` or ```1 << 33``` it will yield in ```1``` and ```2``` respectivelly because the java does a modulus operation of the number of times the bit has to be shifted i.e.
+```1 << 32 == 1 << (32 % 32) == 1 << 0 == 1```
+so ```(1 << 31) + (1 << 1) != (1 << 32)```
