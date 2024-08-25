@@ -178,3 +178,16 @@ int a[] = { 1, 8, 3 };
 // Copying elements of a[] to b[]
 int b[] = a.clone();
 ```
+
+Conversion:
+================================================
+
+Java:
+------------------------------------------------
+
+To convert ```Collection<>``` type we get from say ```Map.values()``` to ```List<>``` we just need to put it into the ArrayList constructor as so:
+```
+Collection collection = new Collection();
+new ArrayList(collection); // You'll get list here
+```
+and the resulting output will not be an list of collection but just an list itself. 
