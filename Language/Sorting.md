@@ -27,3 +27,9 @@ Arrays.stream(arr).
     mapToInt(i -> i). // This is also imp...
     toArray();
 ```
+
+To sort an Integer[] do like this:
+```
+Integer[] numbers = {4, 2, 7, 1, 9, 3};
+Arrays.sort(numbers, (o1, o2) -> o1.compareTo(o2));
+```
