@@ -46,3 +46,29 @@ Join list of strings
 1. Java: <br>
 
 ```String str = String.join("", list);```
+
+Clear string
+====================================================
+1. Java: <br>
+
+String Builder:
+```
+StringBuilder sb = new StringBuilder();
+sb = ""; // Will give an error saying String cannot be converted to String Builder.
+```
+So to clear a String Builder object just do:
+```sb.setLength(0);```
+This will clear all the contents inside of the string.
+
+String Builder
+====================================================
+Pretty much do everything using .toString() function as string builder doesn't support normal string functions. e.g.
+
+1. To convert to char array for shorthand for loop traversal in java:
+```
+sb.toString().toCharArray()
+```
+2. To convert string builder object to string:
+```
+Integer.parseInt(sb.toString());
+```
