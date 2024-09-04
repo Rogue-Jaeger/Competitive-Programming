@@ -62,3 +62,8 @@ then it will yeild 0 because the only set bit is now overflown the size of int
 but if you do ```1 << 32``` or ```1 << 33``` it will yield in ```1``` and ```2``` respectivelly because the java does a modulus operation of the number of times the bit has to be shifted i.e.
 ```1 << 32 == 1 << (32 % 32) == 1 << 0 == 1```
 so ```(1 << 31) + (1 << 1) != (1 << 32)```
+
+In java there are 2 types of bit operations:
+
+1. Signed Shift: Denoted by ```>>``` or ```<<```. This will preserve the sign of the original number.
+2. Ungisned Shift: Denoted by ```>>>``` or ```<<<```. This won't preserve the sign of the original number.
