@@ -191,3 +191,16 @@ Collection collection = new Collection();
 new ArrayList(collection); // You'll get list here
 ```
 and the resulting output will not be an list of collection but just an list itself. 
+
+Fill:
+================================================
+
+Java:
+------------------------------------------------
+
+To fill an array immediately in java with a specific value use the ```Arrays.fill()``` function. e.g.
+
+```
+int[] myArray = new int[5];
+Arrays.fill(myArray, 7);
+```
