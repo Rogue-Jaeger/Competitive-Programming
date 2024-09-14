@@ -67,3 +67,41 @@ In java there are 2 types of bit operations:
 
 1. Signed Shift: Denoted by ```>>``` or ```<<```. This will preserve the sign of the original number.
 2. Ungisned Shift: Denoted by ```>>>``` or ```<<<```. This won't preserve the sign of the original number.
+
+XOR:
+================================================
+
+```XOR``` means exclusive ```OR``` which implicitly means that we take the output of ```OR``` operation which is:
+
+```
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+```
+
+and exclude something from it (the operation ```1 | 1 = 1```) or see it as its exclusive meaning only when there is a ```1``` and ```0``` they have something exclusive, but having ```1``` and ```1``` is not exclusive.
+
+#### Properties:
+
+Markdown works just like ```addition``` and ```subtraction``` and addition operation. i.e.
+
+```
+3 + 7 = 10
+10 - 3 = 7 // We get our original number 7 back.
+10 - 7 = 3 // We get our original number 3 back.
+```
+
+Similarly:
+
+```
+3 ^ 7 = 4
+4 ^ 3 = 7 // We get our original number 7 back.
+4 ^ 7 = 3 // We get our original number 3 back.
+// NOTE: We're using same XOR operation 
+// to get the original numbers back
+// not like addition and subtraction
+// where we had to use 2 ops for the same. 
+```
+
+This property is really helpful in range queries on substrings where we do ```bitwise XOR``` on every number in those ranges. i.e. ```XorQueriesOfASubarray.java // The solution is just like implementing prefix sums.```
