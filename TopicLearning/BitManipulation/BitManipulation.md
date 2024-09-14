@@ -105,3 +105,8 @@ Similarly:
 ```
 
 This property is really helpful in range queries on substrings where we do ```bitwise XOR``` on every number in those ranges. i.e. ```XorQueriesOfASubarray.java // The solution is just like implementing prefix sums.```
+
+AND:
+================================================
+
+The ```AND``` operation ```1 & 3 = 1``` between 2 **positive** (*Will have to check for negetive integers.*) integers will never result in a number greater than the original 2 integers. 
