@@ -204,3 +204,15 @@ To fill an array immediately in java with a specific value use the ```Arrays.fil
 int[] myArray = new int[5];
 Arrays.fill(myArray, 7);
 ```
+
+Immediately declare and add values:
+================================================
+
+Java:
+------------------------------------------------
+
+In case where we have an ```ArrayList``` supporting the type ```ArrayList<Integer[]>```. Now in order to declare ```Integer[]``` and add values at the same time we'll simply do:
+
+```
+array.add(new Integer[] {1, 2, 3});
+```
