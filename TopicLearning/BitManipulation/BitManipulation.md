@@ -106,7 +106,15 @@ Similarly:
 
 This property is really helpful in range queries on substrings where we do ```bitwise XOR``` on every number in those ranges. i.e. ```XorQueriesOfASubarray.java // The solution is just like implementing prefix sums.```
 
+XOR can easily be used to ```set``` or ```unset``` bits at a particular index if we know the bits are going to be different instead of performing operations like addition and subtraction. i.e. ```MinimizeXOR.java```
+
 AND:
 ================================================
 
 The ```AND``` operation ```1 & 3 = 1``` between 2 **positive** (*Will have to check for negetive integers.*) integers will never result in a number greater than the original 2 integers. 
+
+BitCount:
+================================================
+
+Java has an inbuilt function to count the bits in an integer which is:
+```Integer.bitCount(x)```
