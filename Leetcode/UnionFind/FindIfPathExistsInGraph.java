@@ -15,14 +15,14 @@ class Solution {
             secondRoot = parentNodes[secondRoot];
         }
 
-        int temp1 = 0, temp2 = 0, temp3 = firstNode, temp4 = secondNode;
+        int currentParentForFirstNode = 0, currentParentForSecondNode = 0, temp3 = firstNode, temp4 = secondNode;
         while (parentNodes[firstNode] != firstNode || parentNodes[secondNode] != secondNode) { // Doing this step for path compression alone.
-            temp1 = parentNodes[firstNode];
-            temp2 = parentNodes[secondNode];
+            currentParentForFirstNode = parentNodes[firstNode];
+            currentParentForSecondNode = parentNodes[secondNode];
             parentNodes[firstNode] = firstRoot;
             parentNodes[secondNode] = secondRoot;
-            firstNode = temp1;
-            secondNode = temp2;
+            firstNode = currentParentForFirstNode;
+            secondNode = currentParentForSecondNode;
         }
 
         return parentNodes[temp3] == parentNodes[temp4];
