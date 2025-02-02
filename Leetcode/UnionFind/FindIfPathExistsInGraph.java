@@ -8,21 +8,21 @@
 
 // Code thought of and written by me:
 class Solution {
-    private boolean find(int[] parentNodes, int firstEdge, int secondEdge) {
-        int firstRoot = firstEdge, secondRoot = secondEdge;
+    private boolean find(int[] parentNodes, int firstNode, int secondNode) {
+        int firstRoot = firstNode, secondRoot = secondNode;
         while (parentNodes[firstRoot] != firstRoot || parentNodes[secondRoot] != secondRoot) { // This 2 root approach can be further reduced in code size to call find() twice for each root (needs to be done later).
             firstRoot = parentNodes[firstRoot];
             secondRoot = parentNodes[secondRoot];
         }
 
-        int temp1 = 0, temp2 = 0, temp3 = firstEdge, temp4 = secondEdge;
-        while (parentNodes[firstEdge] != firstEdge || parentNodes[secondEdge] != secondEdge) { // Doing this step for path compression alone.
-            temp1 = parentNodes[firstEdge];
-            temp2 = parentNodes[secondEdge];
-            parentNodes[firstEdge] = firstRoot;
-            parentNodes[secondEdge] = secondRoot;
-            firstEdge = temp1;
-            secondEdge = temp2;
+        int temp1 = 0, temp2 = 0, temp3 = firstNode, temp4 = secondNode;
+        while (parentNodes[firstNode] != firstNode || parentNodes[secondNode] != secondNode) { // Doing this step for path compression alone.
+            temp1 = parentNodes[firstNode];
+            temp2 = parentNodes[secondNode];
+            parentNodes[firstNode] = firstRoot;
+            parentNodes[secondNode] = secondRoot;
+            firstNode = temp1;
+            secondNode = temp2;
         }
 
         return parentNodes[temp3] == parentNodes[temp4];
