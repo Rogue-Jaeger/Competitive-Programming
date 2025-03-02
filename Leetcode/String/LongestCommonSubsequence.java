@@ -102,13 +102,13 @@ class Solution {
         for (int i = 1; i <= text1.length(); i++) {
             prevDiagonalValue = 0; // This is something I missed.
             for (int j = 1; j <= text2.length(); j++) {
-                temp = dp[j];
+                temp = dp[j]; // Capturing the value here.
                 if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
                     dp[j] = prevDiagonalValue + 1;
                 } else {
                     dp[j] = Math.max(dp[j], dp[j - 1]);
                 }
-                prevDiagonalValue = temp;
+                prevDiagonalValue = temp; // Setting it here.
             }
         }
 
