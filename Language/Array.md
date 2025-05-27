@@ -4,6 +4,7 @@ Declare and initialize:
 Java:
 ------------------------------------------------
 
+**IMP: You can declare an array of List like this ```List<Integer>[] graph = new List[n];```, and access it like ```graph[i] = new LinkedList<>();```.** <br>
 **IMP: ```new ArrayList(5)``` doesn't mean size is 5 in this case ```.size()``` will give result ```0```.** <br>
 **IMP: ```new LinkedList(5)``` will give error as LinkedList doesn't support initial size.** <br>
 **IMP: Dont access the arraylist same as ```[]``` use ```get()``` method.** <br>
