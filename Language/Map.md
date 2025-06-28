@@ -72,3 +72,17 @@ System.out.println(set.hashCode()); // Will output 12
 ```
 
 This property makes sets effective as keys in maps, especially when checking elements that have been traversed without considering their order, like in `beautifulPermutation.java`.
+
+### Floor/Ceil Functions in TreeMap
+
+```java
+ceilingKey(K key);    // Smallest key ≥ given key
+floorKey(K key);      // Largest key ≤ given key
+higherKey(K key);     // Strictly greater key
+lowerKey(K key);      // Strictly smaller key
+
+ceilingEntry(K key);  // Entry version of ceilingKey
+floorEntry(K key);    // Entry version of floorKey
+higherEntry(K key);   // Entry version of higherKey
+lowerEntry(K key);    // Entry version of lowerKey
+```
