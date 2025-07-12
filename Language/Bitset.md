@@ -77,3 +77,4 @@ Use:
 * Java's `boolean[]` uses 1 byte per element for simplicity and speed
 * It's not space-optimal — it trades space for access speed
 * If you want memory-efficient storage of flags → use `BitSet`
+* I've used it in [Find elements in a contaminated binary tree](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/description/).
