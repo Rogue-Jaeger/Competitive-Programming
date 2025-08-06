@@ -17,3 +17,4 @@
 17. Files starting with ☆ symbol are significant.
 18. Can't do Math.abs(Integer.MIN_VALUE) here MIN_VALUE can be the input range for a question.
 19. It's better to do ```n = -n``` than ```n = n * -1```.
+20. Good equivalent for ```Math.ceil(n / m)``` is ```(n + m - 1) / m```, just add the number and subtract 1 from it used here [Fruits Into Baskets 3](https://leetcode.com/problems/fruits-into-baskets-iii).
