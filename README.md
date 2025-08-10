@@ -18,3 +18,4 @@
 18. Can't do Math.abs(Integer.MIN_VALUE) here MIN_VALUE can be the input range for a question.
 19. It's better to do ```n = -n``` than ```n = n * -1```.
 20. Good equivalent for ```Math.ceil(n / m)``` is ```(n + m - 1) / m```, just add the number and subtract 1 from it used here [Fruits Into Baskets 3](https://leetcode.com/problems/fruits-into-baskets-iii).
+21. Best way to check if an integer is power of 2 without loops: ```(n & (n - 1))```. This will only work for powers that result into an integer greater than 0. Otherwise it would be a fraction less than 1.
