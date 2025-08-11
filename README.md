@@ -19,3 +19,16 @@
 19. It's better to do ```n = -n``` than ```n = n * -1```.
 20. Good equivalent for ```Math.ceil(n / m)``` is ```(n + m - 1) / m```, just add the number and subtract 1 from it used here [Fruits Into Baskets 3](https://leetcode.com/problems/fruits-into-baskets-iii).
 21. Best way to check if an integer is power of 2 without loops: ```(n & (n - 1))```. This will only work for powers that result into an integer greater than 0. Otherwise it would be a fraction less than 1.
+22. While trying to prevent integer overflow, I wrote this code for this problem [Maximum Sum Obtained of any Permutation](https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/description/):
+
+```java
+(int) (result + 1L * diffArr[i] * nums[i]) % 1_000_000_007;
+```
+
+But it is still giving errors due to overflow the reason was because its running (int) cast before doing modulo operation. So the ideal solution will be:
+
+```java
+(int) ((result + 1L * diffArr[i] * nums[i]) % 1_000_000_007)
+```
+
+And to do long bit manipulation do ```(1L << x)``` rather than ```(1 << x)``` which operates in int and will wrap x after 31 (check this once).
