@@ -76,6 +76,7 @@ This property makes sets effective as keys in maps, especially when checking ele
 ### Floor/Ceil Functions in TreeMap
 
 ```java
+// Just remove the key text from the function names and you will get the function names for TreeSet.
 ceilingKey(K key);    // Smallest key ≥ given key
 floorKey(K key);      // Largest key ≤ given key
 higherKey(K key);     // Strictly greater key
