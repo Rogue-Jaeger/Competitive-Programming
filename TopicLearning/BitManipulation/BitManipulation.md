@@ -1,9 +1,12 @@
-In java at least you can infinitely do >> or << operations as the new value will again
-be a 32 bit integer.
+# Bit Manipulation in Java
 
-Somehow the sign bit doesn't shift right or left. e.g:
+## Bit Shifting Behavior
 
-```
+In Java, you can perform infinite right shift (`>>`) or left shift (`<<`) operations as the result is always converted back to a 32-bit integer.
+
+The sign bit behaves specially during shifts. Here's an example:
+
+```java
 public void rangeBitwiseAnd(int left, int right) {
     int j = -1;
 
@@ -16,7 +19,7 @@ public void rangeBitwiseAnd(int left, int right) {
 
 Above code yields in:
 
-```
+```text
 -1
 -2
 -4
@@ -52,69 +55,64 @@ Above code yields in:
 0
 ```
 
-Follow up question: How to determine if a bit is set or not at a particular position.
+## Understanding Bit Operations
 
-Java does a modulus operation before doing bitwise shift operation. i.e.
+### Shift Operations
 
-```1 << 31``` will result in ```-2147483648```
-and then on the same number if you do ```1 << 1``` or ```1 << 2```
-then it will yeild 0 because the only set bit is now overflown the size of int 
-but if you do ```1 << 32``` or ```1 << 33``` it will yield in ```1``` and ```2``` respectivelly because the java does a modulus operation of the number of times the bit has to be shifted i.e.
-```1 << 32 == 1 << (32 % 32) == 1 << 0 == 1```
-so ```(1 << 31) + (1 << 1) != (1 << 32)```
+Java performs a modulus operation before doing bitwise shift operations:
 
-In java there are 2 types of bit operations:
+* `1 << 31` results in `-2147483648`
+* If you then do `1 << 1` or `1 << 2`, it yields 0 (set bit overflows int size)
+* With `1 << 32` or `1 << 33`, you get `1` and `2` respectively due to modulus
+* Example: `1 << 32 == 1 << (32 % 32) == 1 << 0 == 1`
+* Note that `(1 << 31) + (1 << 1) != (1 << 32)`
 
-1. Signed Shift: Denoted by ```>>``` or ```<<```. This will preserve the sign of the original number.
-2. Ungisned Shift: Denoted by ```>>>``` or ```<<<```. This won't preserve the sign of the original number.
+Java has two types of bit shifts:
 
-XOR:
-================================================
+1. Signed Shift (`>>`, `<<`): Preserves the sign of the original number
+2. Unsigned Shift (`>>>`, `<<<`): Does not preserve the sign
 
-```XOR``` means exclusive ```OR``` which implicitly means that we take the output of ```OR``` operation which is:
+## XOR Operations
 
-```
+XOR (exclusive OR) takes the output of OR operation but excludes when both inputs are 1:
+
+```text
 0 | 0 = 0
 0 | 1 = 1
 1 | 0 = 1
 1 | 1 = 1
 ```
 
-and exclude something from it (the operation ```1 | 1 = 1```) or see it as its exclusive meaning only when there is a ```1``` and ```0``` they have something exclusive, but having ```1``` and ```1``` is not exclusive.
+### XOR Properties
 
-#### Properties:
+XOR behaves similar to addition and subtraction:
 
-Markdown works just like ```addition``` and ```subtraction``` and addition operation. i.e.
-
-```
-3 + 7 = 10
-10 - 3 = 7 // We get our original number 7 back.
-10 - 7 = 3 // We get our original number 3 back.
-```
-
-Similarly:
-
-```
+```text
 3 ^ 7 = 4
-4 ^ 3 = 7 // We get our original number 7 back.
-4 ^ 7 = 3 // We get our original number 3 back.
-// NOTE: We're using same XOR operation 
-// to get the original numbers back
-// not like addition and subtraction
-// where we had to use 2 ops for the same. 
+4 ^ 3 = 7  // Original number 7 recovered
+4 ^ 7 = 3  // Original number 3 recovered
 ```
 
-This property is really helpful in range queries on substrings where we do ```bitwise XOR``` on every number in those ranges. i.e. ```XorQueriesOfASubarray.java // The solution is just like implementing prefix sums.```
+This property is useful in:
 
-XOR can easily be used to ```set``` or ```unset``` bits at a particular index if we know the bits are going to be different instead of performing operations like addition and subtraction. i.e. ```MinimizeXOR.java```
+* Range queries on substrings with bitwise XOR (see `XorQueriesOfASubarray.java // The solution is just like implementing prefix sums.`)
+* Setting/unsetting bits at specific indices if we know the bits are going to be different instead of performing operations like addition and subtraction. (see `MinimizeXOR.java`)
 
-AND:
-================================================
+## AND Operations
 
-The ```AND``` operation ```1 & 3 = 1``` between 2 **positive** (*Will have to check for negetive integers.*) integers will never result in a number greater than the original 2 integers. 
+The AND operation (`&`) between two positive integers never results in a number greater than either original integer. Note: Behavior may differ for negative integers.
 
-BitCount:
-================================================
+## Bit Counting
 
-Java has an inbuilt function to count the bits in an integer which is:
-```Integer.bitCount(x)```
+Java provides a built-in function to count bits in an integer:
+
+```java
+Integer.bitCount(x)
+```
+
+## Checking Set Bits
+
+When checking if a bit is set:
+
+* Avoid using `(x & 1) > 0` - This fails with `Integer.MIN_VALUE` (`10000000000000000000000000000000`). (see `SingleNumber3.java`)
+* Use `(x & 1) == 0` instead - Works correctly for both positive and negative numbers
