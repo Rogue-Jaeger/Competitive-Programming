@@ -33,3 +33,13 @@ To sort an Integer[] do like this:
 Integer[] numbers = {4, 2, 7, 1, 9, 3};
 Arrays.sort(numbers, (o1, o2) -> o1.compareTo(o2));
 ```
+Comparator compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second.
+
+
+Team is not used 
+
+Reachable
+Helpful
+Approchable
+You're always try to keep yourself updated on things 
+Understandable

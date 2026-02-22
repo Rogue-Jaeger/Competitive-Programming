@@ -63,7 +63,7 @@ num[1] = new int[5];
 num[2] = new int[2];
 num[3] = new int[3];
 OR
-int[][] num={ {1}, {1,2}, {1,2,3,4,5}, {1,2}, {1,2,3} };
+int[][] num={ {1}, {1,2}, {1,2,3,4,5}, {1,2}, {1,2,3} }; // IMP: Giving values directly also works...
 ```
 
 #### Initialization values:
@@ -217,3 +217,15 @@ In case where we have an ```ArrayList``` supporting the type ```ArrayList<Intege
 ```
 array.add(new Integer[] {1, 2, 3});
 ```
+ArrayList.add will add the value at the specific index and shift the rest towards right, Will have to use .SET() if we want to replace at that index.
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0 ----------- You cannot set at the current index but I think can add.
+at line 100, java.base/jdk.internal.util.Preconditions.outOfBounds
+at line 106, java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex
+at line 302, java.base/jdk.internal.util.Preconditions.checkIndex
+at line 385, java.base/java.util.Objects.checkIndex
+at line 470, java.base/java.util.ArrayList.set
+at line 19, Solution.getRightSideView
+at line 26, Solution.rightSideView
+at line 56, __DriverSolution__.__helper__
+at line 86, __Driver__.main
+^^^^^^^^^^ Check BinaryTreeRightSideView.java for above implementation
