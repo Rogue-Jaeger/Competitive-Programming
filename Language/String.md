@@ -72,3 +72,6 @@ sb.toString().toCharArray()
 ```
 Integer.parseInt(sb.toString());
 ```
+toCharArray for getting chars from for loop from string 
+
+https://stackoverflow.com/questions/22439177/why-is-stringbuilder-much-faster-than-string
